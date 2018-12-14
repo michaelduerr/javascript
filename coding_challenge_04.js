@@ -39,7 +39,7 @@ console.log(john, mark);
 if (john.calcBmi() > mark.calcBmi()) {
 	console.log(john.fullName + ' has a higher BMI of ' + john.bmi);
 }
-else if (mark.calcBmi() > jon.calcBmi()){
+else if (mark.bmi > jon.bmi){
     console.log(mark.fullName + 'has a higher BMI of' + mark.bmi);
 } else {
 	console.log('They have the same BMI.');
