@@ -4,56 +4,56 @@
 
 var john = {
 	name: 'John',
-	bill: [124, 48, 268, 180, 42],
+	bills: [124, 48, 268, 180, 42],
 	tip:[],
 	averageTip:[],
 	final:[],
-	calctip: function() {	
-		for (var i = 0; i < this.bill.length; i++){
-			if (this.bill[i] < 50){
-				this.tip[i] = this.bill[i] * 0.2; 
-				this.final[i] = this.bill[i] + this.tip[i];
+	calcTips: function() {	
+		for (var i = 0; i < this.bills.length; i++){
+			if (this.bills[i] < 50){
+				this.tip[i] = this.bills[i] * 0.2; 
+				this.final[i] = this.bills[i] + this.tip[i];
 			}
-			else if (this.bill[i] <= 50 || this.bill[i] < 200) {
-                this.tip[i] = this.bill[i] * 0.15;
-                this.final[i] = this.bill[i] + this.tip[i];
+			else if (this.bills[i] <= 50 || this.bills[i] < 200) {
+                this.tip[i] = this.bills[i] * 0.15;
+                this.final[i] = this.bills[i] + this.tip[i];
 			}
-			else if (this.bill[i] > 200){
-				this.tip[i] = this.bill[i] * 0.1;
-				this.final[i] = this.bill[i] + this.tip[i];
+			else if (this.bills[i] > 200){
+				this.tip[i] = this.bills[i] * 0.1;
+				this.final[i] = this.bills[i] + this.tip[i];
 			}
 		} 
 	} 
 };
-console.log(john.calctip());
+console.log(john.calcTips());
 console.log(john);
 
 // Mark
 var mark = {
 	name: 'Mark',
-	bill: [77, 375, 110, 45],
+	bills: [77, 375, 110, 45],
 	tip:[],
 	averageTip:[],
 	final:[],
-	calctip: function() {	
-		for (var i = 0; i < this.bill.length; i++){
-			if (this.bill[i] < 100){
-				this.tip[i] = this.bill[i] * 0.2; 
-				this.final[i] = this.bill[i] + this.tip[i];
+	calcTips: function() {	
+		for (var i = 0; i < this.bills.length; i++){
+			if (this.bills[i] < 100){
+				this.tip[i] = this.bills[i] * 0.2; 
+				this.final[i] = this.bills[i] + this.tip[i];
 			}
-			else if (this.bill[i] >= 100 || this.bill[i] < 300) {
-                this.tip[i] = this.bill[i] * 0.1;
-                this.final[i] = this.bill[i] + this.tip[i];
+			else if (this.bills[i] >= 100 || this.bill[i] < 300) {
+                this.tip[i] = this.bills[i] * 0.1;
+                this.final[i] = this.bills[i] + this.tip[i];
 			}
 			else if (this.bill[i] > 300){
-				this.tip[i] = this.bill[i] * 0.25;
-				this.final[i] = this.bill[i] + this.tip[i];
+				this.tip[i] = this.bills[i] * 0.25;
+				this.final[i] = this.bills[i] + this.tip[i];
 			}
 		} 
 	} 	
 };
 
-console.log(mark.calctip());
+console.log(mark.calcTips());
 console.log(mark);
 
 function calcAverage(tip, name) {
